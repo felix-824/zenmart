@@ -4,6 +4,10 @@
   flex-direction: column;
 }
 
+.white_svg {
+   filter: brightness(0) invert(1);
+}
+
  .container .category_top {
    width: 100%;
    height: auto;
@@ -728,6 +732,7 @@
       height: auto;
 
       display: flex;
+      flex-direction: row;
       justify-content: center;
      }
 
@@ -735,26 +740,26 @@
       flex-direction: column;
     }
 
-    .container .category_top {
+    .tv_frame .container .category_top {
       display: flex;
       flex-direction: row;
      }
      
-     .category_top .category_right {
+    .tv_frame .category_top .category_right {
      display: flex;
      flex-direction: row;
      }
 
-      .container .category_right   .hover {
+     .tv_frame .container .category_right   .hover {
        border-bottom: 2px solid; color: #041E42;
        
       }
 
-        .container .category_right .hover:hover {
+      .tv_frame  .container .category_right .hover:hover {
        border-bottom: 4px solid; color:#041E42;;
       }
 
-      .container  .tv-wrapper {
+     .tv_frame .container  .tv-wrapper {
          margin-top: 30px;
          width: 100%;
          height: auto;
@@ -765,7 +770,7 @@
       }
 
        
-      .tv-wrapper .tv_product_boxes{
+     .tv_frame .tv-wrapper .tv_product_boxes{
          width: 1300px;
          width: 100%;
          height: auto;
@@ -775,26 +780,27 @@
       }
 
 
-      .tv_product_boxes .tv_product_box { 
+     .tv_frame .tv_product_boxes .tv_product_box { 
          width: 260px;
          height: 400px;
        
          display: flex;
          flex-direction: column;
          align-items: center;
+         background: #ffffff;
         
       }
-      .tv_product_box .product_img_box {
+     .tv_frame .tv_product_box .product_img_box {
          width: 218px;
           height: 230px;
       }
 
-      .tv_product_box .product_content_box {
+     .tv_frame .tv_product_box .product_content_box {
          display: flex;
          flex-direction: column;
       }
 
-      .product_content_box .product_title {
+     .tv_frame .product_content_box .product_title {
          font-family: 'Jost';
          font-style: normal;
          font-weight: 400;
@@ -804,7 +810,7 @@
         text-transform: uppercase;
         color: #626974;
         }
-    .product_content_box p {
+     .tv_frame .product_content_box p {
       margin-top: 7px;
         font-family: 'Jost';
         font-style: normal;
@@ -815,13 +821,13 @@
       
         }
 
-   .tv_product_box .review {
+     .tv_frame .tv_product_box .review {
      display: flex;
      flex-direction: row;
      align-items: center;
    }
 
-   .tv_product_box .product_content_box  span{
+   .tv_frame .tv_product_box .product_content_box  span{
      font-family: 'Jost';
      font-style: normal;
      font-weight: 400;
@@ -832,16 +838,14 @@
 
    }
 
-  .product_content_box .price_box  {
+ .tv_frame .product_content_box .price_box  {
    margin-top:10px;
     display: flex;
    flex-direction: row;
    align-items: center;
    
-
    }
-
-    .price_box strong{
+   .tv_frame .price_box strong{
     margin-right: 20px;
     font-family: 'Jost';
     font-style: normal;
@@ -851,7 +855,7 @@
     color: #041E42;
    }
 
-    .price_box span{
+   .tv_frame .price_box span{
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
@@ -860,9 +864,139 @@
     text-decoration-line: line-through;
     color: #626974;
    }
+   
+     /* EVENT*/
+   .home_page .event_frame {
+      position: relative;
+      margin-top: 90px;
+      width: 100%;
+      height: 632px;
 
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-image: url('/public/images/icons/event_bg.png');
+     }
 
+     .event_frame .container {
+        flex-direction: row;
+        justify-content: center;
+     }
 
+     .event_frame .event_content_box {
+      width:340px;
+      height: auto;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+     }
+
+      .event_frame  .event_content_box .event_title{
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 40px;
+        text-transform: capitalize;
+
+        color: #FFFFFF;
+     }
+
+     .event_frame  .event_content_box .timer_wrapper{
+        margin: 30px 0px;
+        display: flex;
+        flex-direction: row;
+     }
+
+     .event_frame  .timer_wrapper .timer_box {
+      width: 82px;
+      height: auto;
+
+      display: flex;
+      flex-direction: column;
+     }
+
+      .event_frame  .event_content_box a{
+          width: 140px;
+          height: 50px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: capitalize;
+
+          background: #ffffff;
+          border: 1px solid #ffffff;
+          border-radius: 6px;
+          font-family: 'Jost';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 22px;
+          text-align: center;
+          color:  #041e42;
+     }
+
+      .event_frame    .timer_wrapper strong{
+         font-family: 'Jost';
+         font-style: normal;
+         font-weight: 500;
+         font-size: 28px;
+         line-height: 40px;
+
+         color: #FFFFFF;
+       }
+
+      .event_frame    .timer_wrapper span{
+         font-family: 'Jost';
+         font-style: normal;
+         font-weight: 500;
+         font-size: 16px;
+         line-height: 28px;
+
+         color: #FFFFFF;
+       }
+
+       .event_frame  .container .event_product_wrapper {
+         width: 930px;
+         height: auto;
+
+         display: flex;
+         flex-direction: row;
+       }
+
+     .event_frame   .event_product_wrapper .event_product_boxes{
+         position: relative;
+         width: auto;
+         height: auto;
+
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+      }
+
+     .event_frame   .event_product_boxes .event_product_box{
+         margin-right: 8px;
+         width: 205px;
+         height: 392px;
+
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         border-radius: 6px;
+         background: #ffffff;
+      }
+
+      .event_frame .event_product_box .event_product_img{
+          width: 100%;
+          height: 220px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      
    
 
 
